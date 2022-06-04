@@ -1,16 +1,14 @@
 class JokesController < ApplicationController
-  def index
-  end
+  def index; end
 
   def create
-    @joke = Joke.new(joke_params)    
+    @joke = Joke.new(joke_params)
     if @joke.save
-      flash.now[:success] = "Joke was successfully created."
-      render_flash
+      flash.now[:success] = 'Joke was successfully created.'
     else
       flash[:error] = 'This joke already exists.'
-      render_flash
-    end    
+    end
+    render_flash
   end
 
   private
