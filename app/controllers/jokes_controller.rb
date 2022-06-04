@@ -4,11 +4,15 @@ class JokesController < ApplicationController
   def create
     @joke = Joke.new(joke_params)
     if @joke.save
+      Like.create(joke_id: @joke.id, user_id: current_user.id)
       flash.now[:success] = 'Joke was successfully created.'
+      render_flash
     else
-      flash[:error] = 'This joke already exists.'
-    end
-    render_flash
+      @stored_joke = Joke.find_by(api_id: joke_params[:api_id])
+      Like.create(joke_id: @stored_joke.id, user_id: current_user.id)
+      flash.now[:error] = 'This joke already exists.'      
+      render_flash
+    end    
   end
 
   private
