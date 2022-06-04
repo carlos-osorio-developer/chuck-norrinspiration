@@ -36,6 +36,8 @@ gem "redis", "~> 4.0"
 # Use Devise for authentication
 gem 'devise'
 
+gem 'jsbundling-rails'  # needed for bootstrap javascript
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
