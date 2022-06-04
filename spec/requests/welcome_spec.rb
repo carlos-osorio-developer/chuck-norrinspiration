@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Welcomes', type: :request do
-  describe 'GET /index' do
+  describe 'GET Homepage' do
     it 'returns http success' do
-      get '/welcome/index'
-      expect(response).to have_http_status(:success)
+      get '/'
+      expect(response).to have_http_status(:found)
     end
   end
 end
