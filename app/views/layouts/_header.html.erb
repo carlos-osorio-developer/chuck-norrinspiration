@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f15a24;"">
+  <div class="container-fluid d-flex justify-content-between">
+    <div class="d-flex align-items-center">
+      <%= link_to root_path, style: "max-width: 100px" do %>
+        <%= image_tag 'logo.png', alt: 'Chuck Norris Logo', class: 'img-fluid' %>
+      <% end %>
+      <%= link_to 'NorrInspiration', root_path, class:"navbar-brand text-light ms-2 fw-bold fs-2" %>      
+    </div>
+    <div id="navbarNavAltMarkup">
+      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>      
+      <div class="navbar-nav d-lg-flex align-items-center d-none">           
+        <span class="nav-link text-light fs-2">|</span>
+        <% if current_user %>
+          <%= link_to current_user.email, edit_user_registration_path, class:"nav-link text-light fw-bold fs-6" %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"nav-link text-light fs-5" %>
+        <% else %>
+          <%= link_to 'Log in', new_user_session_path, class:"nav-link text-light fs-5" %>
+          <%= link_to 'Sign in', new_user_registration_path, class:"nav-link text-light fs-5" %>      
+        <% end %>
+      </div>
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <% if current_user %>
+            <%= link_to current_user.email, edit_user_registration_path, class:"nav-link fw-bold fs-6" %>
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"nav-link fs-5" %>
+          <% else %>
+            <%= link_to 'Log in', new_user_session_path, class:"nav-link fs-5" %>
+            <%= link_to 'Sign in', new_user_registration_path, class:"nav-link fs-5" %>      
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
