@@ -1,9 +1,21 @@
 <%= turbo_frame_tag 'joke-div' do %>
-  <h2>Check out this neat joke:</h2>
-  <p>
-    <%= @chuck_joke.content %>
-  </p>
-  <button type="button" class="btn btn-primary">
-    <%= link_to 'Get a new joke', welcome_show_path, class: 'text-decoration-none text-light' %>
-  </button>
+  <div class="card">
+    <div class="card-header">
+      Check out this neat joke:
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p><%= @chuck_joke.content %></p>
+        <footer class="blockquote-footer text-end">Curious and real fact about <cite title="Source Title">Chuck Norris</cite></footer>
+      </blockquote>
+    </div>
+    <div class="d-flex justify-content-end">
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <i class="bi bi-star-fill btn btn-danger" aria-hidden="true"></i>
+        <button type="button" class="btn btn-primary">
+          <%= link_to 'Get a new joke', welcome_show_path, class: 'text-decoration-none text-light' %>
+        </button>
+      </div>
+    </div>
+  </div>
 <% end %>
