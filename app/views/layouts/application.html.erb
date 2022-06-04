@@ -11,10 +11,11 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="container mb-5">
+    <%= render 'layouts/header' %>    
+    <%= turbo_frame_tag 'flash' do %>
+      <%= render 'shared/flash' %>
+    <% end %>
+    <div class="container my-5">
       <%= yield %>
     </div>
   </body>

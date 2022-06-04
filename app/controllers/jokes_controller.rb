@@ -3,14 +3,14 @@ class JokesController < ApplicationController
   end
 
   def create
-    @joke = Joke.new(joke_params)
-    respond_to do |format|
-      if @joke.save
-        flash[:notice] = "Joke was successfully created."
-      else
-        flash[:error] = 'Joke was not created.'
-      end
-    end
+    @joke = Joke.new(joke_params)    
+    if @joke.save
+      flash.now[:success] = "Joke was successfully created."
+      render_flash
+    else
+      flash[:error] = 'This joke already exists.'
+      render_flash
+    end    
   end
 
   private
