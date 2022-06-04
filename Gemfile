@@ -38,6 +38,9 @@ gem 'devise'
 
 gem 'jsbundling-rails'  # needed for bootstrap javascript
 
+# Use httparty for HTTP requests
+gem 'httparty'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
