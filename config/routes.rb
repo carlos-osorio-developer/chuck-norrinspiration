@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'jokes/index'
   root 'welcome#index'
+  get 'welcome/show'
+  get 'jokes/index'  
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

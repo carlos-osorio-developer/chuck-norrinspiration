@@ -9,7 +9,10 @@ class GetJoke
 end
 
 class WelcomeController < ApplicationController
-  def index
+  def index    
+  end
+
+  def show
     @api_response = GetJoke.new.get_joke
     @chuck_joke = Joke.new
     @chuck_joke.api_id = @api_response['id']

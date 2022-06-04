@@ -1,7 +1,9 @@
-<h1>Welcome page</h1>
-<p>Click here to get a new joke:</p>
-<%= turbo_frame_tag 'joke-div' do %>  
+<%= turbo_frame_tag 'joke-div' do %>
+  <h2>Check out this neat joke:</h2>
+  <p>
+    <%= @chuck_joke.content %>
+  </p>
   <button type="button" class="btn btn-primary">
     <%= link_to 'Get a new joke', welcome_show_path, class: 'text-decoration-none text-light' %>
-  </button>  
+  </button>
 <% end %>
