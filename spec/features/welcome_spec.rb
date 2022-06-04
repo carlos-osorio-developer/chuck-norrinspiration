@@ -15,14 +15,14 @@ RSpec.feature 'Welcome', type: :feature do
 
     it 'saves the joke if like button is clicked' do
       visit '/'
-      click_link 'Get a new joke' 
+      click_link 'Get a new joke'
       find(:css, 'button.btn.btn-success').click
       expect(Joke.all.count).to eq(1)
     end
 
     it 'saves the like if like button is clicked' do
       visit '/'
-      click_link 'Get a new joke' 
+      click_link 'Get a new joke'
       find(:css, 'button.btn.btn-success').click
       expect(Like.all.count).to eq(1)
     end

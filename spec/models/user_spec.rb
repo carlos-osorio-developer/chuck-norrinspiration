@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  context 'unique user' do    
+  context 'unique user' do
     it 'is valid with valid attributes' do
       expect(FactoryBot.build(:user)).to be_valid
     end
