@@ -1,6 +1,6 @@
 <h2 class="mt-4 ms-4" style="color: #FA690D;"><%= t('users.signup') %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'm-4 text-light'}) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'm-4 text-light'}, data: {turbo: false}) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
