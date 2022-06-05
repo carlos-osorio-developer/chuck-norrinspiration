@@ -1,14 +1,14 @@
 <div class="card w-25 mx-1 my-4" style="background-color: #DE7C0B;">
   <div class="card-header fs-4" style="background-color: #C46D0A;">
-    <p>Joke #<%= joke.id %></p>
+    <p> <%= t('activerecord.models.joke')%> #<%= joke.id %></p>
   </div>
   <div class="card-body">
     <blockquote class="blockquote my-2">
       <p><%= joke.content %></p>
-      <footer class="blockquote-footer text-dark text-end fs-6">Curious and real fact about <cite title="Source Title">Chuck Norris</cite></footer>
+      <footer class="blockquote-footer text-dark text-end fs-6"><%= t('welcome.quote') %><cite title="Source Title">Chuck Norris</cite></footer>
     </blockquote>
   </div>
   <div class="d-flex justify-content-end">
-    <%= button_to 'Delete', destroy_like_path(joke), class: 'btn btn-danger', method: :delete, data: { action: "click->jokes#delete_like" } %>
+    <%= button_to t('general.delete'), destroy_like_path(joke), class: 'btn btn-danger', method: :delete, data: { action: "click->jokes#delete_like" } %>
   </div>
 </div>

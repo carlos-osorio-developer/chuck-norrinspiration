@@ -1,9 +1,9 @@
 <h1 class="mb-0" style="color: #FA690D;">Chuck NorrInspiration</h1>
-<h2 class="mb-4" style="color: #FA690D;">One laugh at a time</h2>
+<h2 class="mb-4" style="color: #FA690D;"><%= t('main.welcome_msg') %></h2>
 <%= turbo_frame_tag 'joke-div' do %>  
-  <p class="text-light">Jump to a random joke, or relive your favorites:</p>
+  <p class="text-light"> <%= t('main.welcome_instruction') %> </p>
   <div class="btn-group" role="group" aria-label="Basic mixed styles example">  
-    <%= link_to 'Get a new joke', welcome_show_path, class: 'btn btn-success text-decoration-none text-light' %>    
-    <%= link_to 'My jokes', jokes_path, class: 'btn btn-primary text-decoration-none text-light' %>
+    <%= link_to t('welcome.new'), welcome_show_path, class: 'btn btn-success text-decoration-none text-light' %>    
+    <%= link_to t('welcome.favorites'), jokes_path, class: 'btn btn-primary text-decoration-none text-light' %>
   </button>  
 <% end %>

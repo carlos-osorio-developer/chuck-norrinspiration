@@ -12,15 +12,15 @@
       </button>
       <nav>
         <ul class="navbar-nav d-lg-flex align-items-center d-none">
-          <li><a data-turbo-frame="joke-div" href="<%= welcome_show_path %>" class="nav-item nav-link text-light ms-2 fw-bold fs-5">Get Joke</a></li>
-          <li><a data-turbo-frame="joke-div" href="<%= jokes_path %>" class="nav-item nav-link text-light ms-2 fw-bold fs-5">My Jokes</a></li>
+          <li><a data-turbo-frame="joke-div" href="<%= welcome_show_path %>" class="nav-item nav-link text-light ms-2 fw-bold fs-5"><%= t('welcome.new') %></a></li>
+          <li><a data-turbo-frame="joke-div" href="<%= jokes_path %>" class="nav-item nav-link text-light ms-2 fw-bold fs-5"><%= t('welcome.favorites') %></a></li>
           <span class="nav-link text-light fs-2">|</span>
           <% if current_user %>
             <li><%= link_to current_user.email, edit_user_registration_path, class:"nav-link text-light fw-bold fs-5" %></li>
-            <li><%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete }, class: "nav-link text-light fs-5" %></li>
+            <li><%= link_to t('users.logout_action'), destroy_user_session_path, data: { "turbo-method": :delete }, class: "nav-link text-light fs-5" %></li>
           <% else %>
-            <li><%= link_to 'Log in', new_user_session_path, class:"nav-link text-light fs-5" %></li>
-            <li><%= link_to 'Sign up', new_user_registration_path, class:"nav-link text-light fs-5" %></li>
+            <li><%= link_to t('users.log_action'), new_user_session_path, class:"nav-link text-light fs-5" %></li>
+            <li><%= link_to t('users.sign_action'), new_user_registration_path, class:"nav-link text-light fs-5" %></li>
           <% end %>
         </ul>
       </nav>
@@ -33,15 +33,15 @@
         <div class="offcanvas-body">
           <nav>
             <ul class="navbar-nav">
-              <li><a data-turbo-frame="joke-div" href="<%= welcome_show_path %>" class="nav-link fw-bold fs-5">Get Joke</a></li>
-              <li><a data-turbo-frame="joke-div" href="<%= jokes_path %>" class="nav-link fw-bold fs-5">My Jokes</a></li>
+              <li><a data-turbo-frame="joke-div" href="<%= welcome_show_path %>" class="nav-link fw-bold fs-5"><%= t('welcome.new') %></a></li>
+              <li><a data-turbo-frame="joke-div" href="<%= jokes_path %>" class="nav-link fw-bold fs-5"><%= t('welcome.favorites') %></a></li>
               <li><hr class="dropdown-divider"></li>
               <% if current_user %>
                 <li class="my-2"><%= link_to current_user.email, edit_user_registration_path, class:"fw-bold text-decoration-none fs-6" %></li>
-                <li class="my-2"><%= link_to "Log out", destroy_user_session_path, data: { "turbo-method": :delete }, class: "text-decoration-none fs-5" %></li>
+                <li class="my-2"><%= link_to t('users.logout_action'), destroy_user_session_path, data: { "turbo-method": :delete }, class: "text-decoration-none fs-5" %></li>
               <% else %>
-                <li class="my-2"><%= link_to 'Log in', new_user_session_path, class:"text-decoration-none fs-5" %></li>
-                <li class="my-2"><%= link_to 'Sign up', new_user_registration_path, class:"text-decoration-none fs-5" %></li>
+                <li class="my-2"><%= link_to t('users.log_action'), new_user_session_path, class:"text-decoration-none fs-5" %></li>
+                <li class="my-2"><%= link_to t('users.sign_action'), new_user_registration_path, class:"text-decoration-none fs-5" %></li>
               <% end %>
             </ul>
           </nav>
