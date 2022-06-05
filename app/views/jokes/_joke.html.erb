@@ -8,7 +8,7 @@
       <footer class="blockquote-footer text-dark text-end fs-6">Curious and real fact about <cite title="Source Title">Chuck Norris</cite></footer>
     </blockquote>
   </div>
-  <div class="d-flex justify-content-end">                    
-    <%= button_to 'Delete', destroy_like_path(joke), method: :delete, class: 'btn btn-danger' %>
+  <div class="d-flex justify-content-end">
+    <%= button_to 'Delete', destroy_like_path(joke), class: 'btn btn-danger', method: :delete, data: { action: "click->jokes#delete_like" } %>
   </div>
 </div>
