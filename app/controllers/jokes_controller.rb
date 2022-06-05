@@ -1,5 +1,7 @@
 class JokesController < ApplicationController
-  def index; end
+  def index
+    @jokes = current_user.jokes
+  end
 
   def create
     @joke = Joke.new(joke_params)

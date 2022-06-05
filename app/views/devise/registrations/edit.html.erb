@@ -1,6 +1,6 @@
-<h2 class="mt-4 ms-4">Edit</h2>
+<h2 class="mt-4 ms-4" style="color: #FA690D;">Edit</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'm-4' }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'm-4 text-light' }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
@@ -31,14 +31,14 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update", class: 'btn btn-outline-success' %>
+    <%= f.submit "Update", class: 'btn btn-success' %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<h3 class="ms-4" style="color: #FA690D;">Cancel my account</h3>
 
 <div class="my-4 ms-4">
-  <p>Unhappy?
+  <p class="text-light">Unhappy?
   <div class="btn-group" role="group" aria-label="Basic mixed styles example">
     <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
     <%= link_to "Back", :back, class: "btn btn-primary" %>
