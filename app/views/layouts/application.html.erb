@@ -10,7 +10,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body style="background-color: #2a2a2a;">
     <%= render 'layouts/header' %>    
     <%= turbo_frame_tag 'flash' do %>
       <%= render 'shared/flash' %>

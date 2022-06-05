@@ -1,6 +1,8 @@
-<h1 class="mb-4">Get Jokes!</h1>
+<h1 class="mb-0" style="color: #FA690D;">Chuck NorrInspiration</h1>
+<h2 class="mb-4" style="color: #FA690D;">One laugh at a time</h2>
 <%= turbo_frame_tag 'joke-div' do %>  
-  <button type="button" class="btn btn-primary">
-    <%= link_to 'Get a new joke', welcome_show_path, class: 'text-decoration-none text-light' %>
+  <p class="text-light">Jump to a random joke, or relive your favorites:</p>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">  
+    <%= link_to 'Get a new joke', welcome_show_path, class: 'btn btn-success text-decoration-none text-light' %>    
   </button>  
 <% end %>
