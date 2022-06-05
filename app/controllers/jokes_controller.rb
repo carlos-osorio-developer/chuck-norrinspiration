@@ -16,6 +16,13 @@ class JokesController < ApplicationController
     render_flash
   end
 
+  def destroy_like
+    @like = Like.find_by(joke_id: params[:id], user_id: current_user.id)
+    @like.destroy
+    flash.now[:success] = 'Joke successfully removed from favorites.'
+    render_flash
+  end
+
   private
 
   def joke_params
