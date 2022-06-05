@@ -1,0 +1,9 @@
+<h1 class="mb-0" style="color: #FA690D;">Chuck NorrInspiration</h1>
+<h2 class="mb-4" style="color: #FA690D;"><%= t('main.welcome_msg') %></h2>
+<%= turbo_frame_tag 'joke-div' do %>  
+  <p class="text-light"> <%= t('main.welcome_instruction') %> </p>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">  
+    <%= link_to t('welcome.new_action'), welcome_show_path, class: 'btn btn-success text-decoration-none text-light' %>    
+    <%= link_to t('welcome.favorites'), jokes_path, class: 'btn btn-primary text-decoration-none text-light' %>
+  </button>  
+<% end %>

@@ -1,0 +1,19 @@
+<%= turbo_frame_tag 'joke-div' do %>
+  <div class="card" style="background-color: #DE7C0B;">
+    <div class="card-header fs-4" style="background-color: #C46D0A;">
+      <%= t('welcome.showing') %>
+    </div>
+    <div class="card-body">
+      <blockquote class="my-2 blockquote">
+        <p><%= @chuck_joke.content %></p>
+        <footer class="my-2 blockquote-footer text-dark text-end fs-6"><%= t('welcome.quote') %><cite title="Source Title">Chuck Norris</cite></footer>
+      </blockquote>
+    </div>
+    <div class="d-flex justify-content-end">
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <%= button_to raw("<i class='bi bi-star-fill' aria-hidden='true'></i>"), jokes_path(joke: { api_id: @chuck_joke.api_id, content: @chuck_joke.content }), method: :post, class: 'btn btn-danger' %>
+        <%= link_to t('welcome.new_action'), welcome_show_path, class: 'btn btn-success' %>        
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -4,11 +4,11 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t "hello"
+#     I18n.t 'hello'
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t("hello") %>
+#     <%= t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -24,10 +24,50 @@
 # Instead, surround them with single quotes.
 #
 # en:
-#   "true": "foo"
+#   'true': 'foo'
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+en:  
+  general:
+    back: "Back"
+    delete: "Delete"
+    error:
+      zero: "No errors"
+      one: "One error"
+      other: "%{count} errors"
+  main:
+    welcome_msg: "One laugh at a time"
+    welcome_instruction: "Jump to a random joke, or relive your favorites:"
+  msgs:
+    joke_added: 'The joke was successfully added to your favorites.'
+    duplicate_joke: 'This joke is already in your favorites.'
+    delete_joke: 'The joke was successfully removed from your favorites.'
+  welcome:
+    new: "Get Joke"
+    favorites: "My Jokes"
+    new_action: "Get a new joke"
+    showing: "Check out this neat joke:"
+    quote: "Curious and 100% real fact about "
+  users:
+    login: "Login"    
+    signup: "Sign up"
+    edit: "Edit user data"
+    cancel: "Cancel my account"    
+    email: "Email"
+    password: "Password"
+    password_confirmation: "Password confirmation"
+    remember_me: "Remember me"
+    log_action: "Log in"
+    logout_action: "Log out"
+    sign_action: "Sign up"
+    update_action: "Update"
+    forgot_password: "Forgot your password?"
+    current_password: "Current password"
+    password_unchange: "(leave blank if you don't want to change it)"
+    password_explaining: "(we need your current password to confirm your changes)"
+    min_chars: "characters minimum"
+    are_you_unhappy: "Unhappy?"
+    cancel_confirmation: "Are you sure?"
+
