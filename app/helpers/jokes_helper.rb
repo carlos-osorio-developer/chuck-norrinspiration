@@ -1,5 +1,5 @@
 module JokesHelper
   def jokes_any
-    @jokes.any? ? 'cards' : 'none'
+    @jokes.nil? || @jokes.empty? ? 'none' : 'cards'
   end
 end

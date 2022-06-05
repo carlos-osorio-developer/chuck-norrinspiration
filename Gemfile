@@ -83,6 +83,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
   # Steroids for Tests
-  gem 'database_cleaner'
+  gem 'database_cleaner-active_record'
   gem 'faker'
 end

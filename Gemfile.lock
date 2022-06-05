@@ -88,8 +88,6 @@ GEM
     crass (1.0.6)
     cssbundling-rails (1.1.0)
       railties (>= 6.0.0)
-    database_cleaner (2.0.1)
-      database_cleaner-active_record (~> 2.0.0)
     database_cleaner-active_record (2.0.1)
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
@@ -280,7 +278,7 @@ DEPENDENCIES
   bootsnap
   capybara
   cssbundling-rails
-  database_cleaner
+  database_cleaner-active_record
   debug
   devise
   factory_bot_rails
