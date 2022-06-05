@@ -6,11 +6,11 @@ class JokesController < ApplicationController
   def create
     @joke = Joke.new(joke_params)
     if @joke.save
-      add_like(@joke)      
+      add_like(@joke)
     else
       @stored_joke = Joke.find_by(api_id: joke_params[:api_id])
-      add_like(@stored_joke)      
-    end    
+      add_like(@stored_joke)
+    end
   end
 
   def add_like(joke)
