@@ -20,7 +20,7 @@ It was developed using TDD, and is fully translatable to spanish (i18n).
 ![](main-gif.gif)
 
 > [Heroky deployment](https://norrinspiration.herokuapp.com/) \
-> user: admin@admin.com \
+> user: ```admin@admin.com``` \
 > password: 123123123
 
 ## Getting Started
