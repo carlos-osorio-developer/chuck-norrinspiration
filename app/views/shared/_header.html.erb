@@ -33,8 +33,8 @@
         <div class="offcanvas-body">
           <nav>
             <ul class="navbar-nav">
-              <li><a data-turbo-frame="joke-div" href="<%= welcome_show_path %>" class="nav-link fw-bold fs-5"><%= t('welcome.new') %></a></li>
-              <li><a data-turbo-frame="joke-div" href="<%= jokes_path %>" class="nav-link fw-bold fs-5"><%= t('welcome.favorites') %></a></li>
+              <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><a data-turbo-frame="joke-div" href="<%= welcome_show_path %>" class="nav-link fw-bold fs-5"><%= t('welcome.new') %></a></li>
+              <li type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><a data-turbo-frame="joke-div" href="<%= jokes_path %>" class="nav-link fw-bold fs-5"><%= t('welcome.favorites') %></a></li>
               <li><hr class="dropdown-divider"></li>
               <% if current_user %>
                 <li class="my-2"><%= link_to current_user.email, edit_user_registration_path, class:"fw-bold text-decoration-none fs-6" %></li>
