@@ -1,9 +1,22 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-body {
+body {  
   min-height: 100vh;
   background-image: url("kick.png");  
   background-repeat: no-repeat;
   background-position: right bottom;
+}
+
+// media query:
+@media (min-width: 768px) {
+  #joke-card {
+    width: 40%;
+  }  
+}
+
+@media (min-width: 992px) {
+  #joke-card {
+    width: 30%;
+  }
 }

@@ -1,6 +1,6 @@
 <h2 class="mt-4 ms-4" style="color: #FA690D;"><%= t('users.login') %></h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'm-4 w-25 text-light'}, data: {turbo: false}) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'm-4 w-75 text-light'}, data: {turbo: false}) do |f| %>
   <div class="field">
     <%= f.label :email, class: 'form-label fs-6' %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
