@@ -32,8 +32,6 @@ The App was deployed on Heroku, but also on AWS Elastic Beanstalk, using AWS ERD
 
 To get a local copy up and running follow these simple example steps.
 
-### Setup
-
 ### Prerequisites
 
 - Ruby and Ruby on Rails installed on your computer
@@ -67,7 +65,11 @@ To get a local copy up and running follow these simple example steps.
 
 - Run `rails s` and go to `http://localhost:3000/` in your browser.
 
+## ToDo
 
+  - Add routes to switch between languages.
+  - Autodisclose notifications.
+  
 ## Author
 
 👤 **Carlos Osorio**
