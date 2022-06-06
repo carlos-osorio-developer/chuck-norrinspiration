@@ -19,7 +19,12 @@ It was developed using TDD, and is fully translatable to spanish (i18n).
 
 ![](main-gif.gif)
 
-> [Heroky deployment](https://norrinspiration.herokuapp.com/) \
+The App was deployed on Heroku, but also on AWS Elastic Beanstalk, using AWS ERD service.
+
+[Heroky deployment](https://norrinspiration.herokuapp.com/)
+
+[AWS deployment](http://norrinspiration-env.eba-iasjhydg.us-east-1.elasticbeanstalk.com/)
+
 > user: ```admin@admin.com``` \
 > password: 123123123
 
