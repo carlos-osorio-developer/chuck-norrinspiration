@@ -1,6 +1,6 @@
 # Norrinspiration
 
-This app allows the user to fetch jokes from from [Chuck Norris API](https://api.chucknorris.io/). The user can add or delete a joke to the list of favorite jokes, every time a joke is likes, it is saved to the local database.
+This app allows the user to fetch jokes from from [Chuck Norris API](https://api.chucknorris.io/). The user can add or delete a joke to the list of favorite jokes, every time a joke is liked, it is saved to the local database.
 
 This app uses HotWire to dynamically load the sections and jokes from the API and display them on the screen.
 
