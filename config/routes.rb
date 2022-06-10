@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/healthcheck', to: proc { [200, {}, ['success']] }
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     root 'welcome#index'
     get 'welcome/show'    
