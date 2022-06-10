@@ -67,7 +67,6 @@ To get a local copy up and running follow these simple example steps.
 
 ## ToDo
 
-  - Add routes to switch between languages.
   - Autodisclose notifications.
   
 ## Author
