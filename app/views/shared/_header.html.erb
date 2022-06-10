@@ -10,7 +10,7 @@
       <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <nav>
+      <nav>        
         <ul class="navbar-nav d-lg-flex align-items-center d-none">
           <li><a data-turbo-frame="joke-div" href="<%= welcome_show_path %>" class="nav-item nav-link text-light ms-2 fw-bold fs-5"><%= t('welcome.new') %></a></li>
           <li><a data-turbo-frame="joke-div" href="<%= jokes_path %>" class="nav-item nav-link text-light ms-2 fw-bold fs-5"><%= t('welcome.favorites') %></a></li>
@@ -22,13 +22,28 @@
             <li><%= link_to t('users.log_action'), new_user_session_path, class:"nav-link text-light fs-5" %></li>
             <li><%= link_to t('users.sign_action'), new_user_registration_path, class:"nav-link text-light fs-5" %></li>
           <% end %>
+          <span class="nav-link text-light fs-2">|</span>
+          <li>
+            <%=
+              link_to_if(params["locale"] === "es", raw(image_tag 'usa.png'), root_path(locale: :en)) do
+                link_to(raw(image_tag 'spain.png'), root_path(locale: :es))
+              end
+            %>
+          </li>
         </ul>
       </nav>
       </div>
       <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <div>
+            <%=
+              link_to_if(params["locale"] === "es", raw(image_tag 'usa.png'), root_path(locale: :en)) do
+                link_to(raw(image_tag 'spain.png'), root_path(locale: :es))
+              end
+            %>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
         </div>
         <div class="offcanvas-body">
           <nav>
