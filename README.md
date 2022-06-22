@@ -23,8 +23,6 @@ The App was deployed on Heroku, but also on AWS Elastic Beanstalk, using AWS ERD
 
 [Heroky deployment](https://norrinspiration.herokuapp.com/)
 
-[AWS deployment](http://norrinspiration-env.eba-iasjhydg.us-east-1.elasticbeanstalk.com/)
-
 > user: ```admin@admin.com``` \
 > password: 123123123
 
